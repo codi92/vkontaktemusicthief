@@ -1,0 +1,8 @@
+[RB Plugin]
+Loader=python
+Module=VkontakteMusicThief
+IAge=1
+Name=VkontakteMusicThief
+Authors=Nikolay Kandalintsev
+Copyright=Copyright © 2009 Nikolay Kandalintsev
+Website=http://nicloay.blogspot.com
