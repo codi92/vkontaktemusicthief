@@ -14,6 +14,7 @@ import re
 from VkontakteMusicThiefPreferences import VkontakteMusicThiefPreferences
 from Keyring import store_cc_details,get_cc_details
 from multiprocessing import Lock
+import time
 
 class VkontakteSource(rb.BrowserSource):
     def __init__(self):
@@ -115,6 +116,7 @@ class VkontakteMusicThief (rb.Plugin):
             print active_page
             if (active_page<summary):
                 current_page=AUDIO_PAGE_REF+"?act=getpages&auto=1&id="+self.__id+"&offset="+str(active_page)
+                time.sleep(0.2)
             else:
                 current_page=""
 
@@ -144,4 +146,5 @@ class VkontakteMusicThief (rb.Plugin):
         info = response.info()
         charset = info['Content-Type'].split('charset=')[-1]
         result=unicode(the_page,charset)
+        print result
         return result
